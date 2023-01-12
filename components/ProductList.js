@@ -33,7 +33,17 @@ export default class ProductList extends Component {
             ]
 
         }
+        for (var i = this.state.data.length - 1; i > 0; i--) {
+   
+         
+            var j = Math.floor(Math.random() * (i + 1));
+                        
+            var temp = this.state.data[i];
+            this.state.data[i] = this.state.data[j];
+            this.state.data[j] = temp;
+        }
     }
+   
     render(){
         return (
             <View>
